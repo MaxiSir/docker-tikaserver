@@ -2,12 +2,12 @@ FROM ubuntu:bionic as base
 RUN apt-get update
 
 ENV TIKA_VERSION 1.24.1
-MAINTAINER david@logicalspark.com
+MAINTAINER kozk.michal@gmail.com
 
 FROM base as dependencies
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install openjdk-11-jre-headless gdal-bin tesseract-ocr \
-        tesseract-ocr-eng tesseract-ocr-ita tesseract-ocr-fra tesseract-ocr-spa tesseract-ocr-deu
+        tesseract-ocr-ces
 
 RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y xfonts-utils fonts-freefont-ttf fonts-liberation ttf-mscorefonts-installer wget cabextract
