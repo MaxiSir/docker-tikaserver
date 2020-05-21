@@ -1,12 +1,9 @@
-# docker-tikaserver [![Build Status](https://travis-ci.org/LogicalSpark/docker-tikaserver.svg?branch=master)](https://travis-ci.org/LogicalSpark/docker-tikaserver)
+# docker-tikaserver-ces 
+This repo is based on github.com/LogicalSpark/docker-tikaserver and just modifies the language pack.
 This repo contains the Dockerfile to create a docker image that contains the latest Ubuntu running the Apache Tika 1.24.1 Server on Port 9998 using Java 11.
 
 Out-of-the-box the container also includes dependencies for the GDAL and Tesseract OCR parsers.  To balance showing functionality versus the size of the image, this file currently installs the language packs for the following languages:
-* English
-* French
-* German
-* Italian
-* Spanish.
+* Czech.
 
 To install more languages simply update the apt-get command to include the package containing the language you required, or include your own custom packs using an ADD command.
 
