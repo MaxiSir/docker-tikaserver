@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag maxisir/tika-server-ces:latest
+      run: docker build . --file Dockerfile --tag maxisir/tika-server-ces
+    - name: Publish Docker image
+      run: docker push maxisir/tika-server-ces:latest
